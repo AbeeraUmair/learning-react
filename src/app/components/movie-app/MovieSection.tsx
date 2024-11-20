@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface Movie {
@@ -16,7 +17,9 @@ const MovieList: React.FC<{ movies: Movie[] }> = ({ movies }) => {
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       {movies.map((movie) => (
         <div key={movie.id} className="border p-2">
-          <img
+          <Image
+          width={100}
+          height={100}
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
             className="w-full"

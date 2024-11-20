@@ -15,6 +15,7 @@ export async function GET(request: Request) {
 
   try {
     const response = await axios.get(apiUrl);
+    console.log(response.data)
     return NextResponse.json({ results: response.data.results || [] });
   } catch (error) {
     console.error("Error fetching TMDB API:", error);
