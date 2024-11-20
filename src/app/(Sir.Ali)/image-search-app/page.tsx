@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react";
-import SearchBar from "@/app/components/SearchBar";
-import ImageList from "@/app/components/ImageList";
+import SearchBar from "@/app/components/image-search/SearchBar";
+import ImageList from "@/app/components/image-search/ImageList";
 
 const ImageSearch = () => {
   const [images, setImages] = useState<[]>([]);

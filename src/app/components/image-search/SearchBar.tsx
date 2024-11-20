@@ -20,15 +20,20 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="search-input">Enter Search Term:</label>
+      <h1 className="font-bold text-6xl flex justify-center mt-6">Image Search App</h1>
+      <form onSubmit={handleSubmit} className="mt-8 flex justify-center">
+        {/* <label className="text-3xl mx-3">Enter Search Term:</label> */}
         <input
           id="search-input"
           value={term}
           onChange={(e) => setTerm(e.target.value)}
           type="text"
+          className="rounded-lg bg-slate-200  mx-2 px-2 py-1 "
         />
-        <button type="submit">Search</button>
+        <button 
+        className="bg-gray-200 rounded-lg mx-2 px-4 py-1"
+        type="submit"
+        >Search</button>
       </form>
     </div>
   );
