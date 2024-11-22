@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import SearchBar from "@/app/components/image-search/SearchBar";
 import ImageList from "@/app/components/image-search/ImageList";
+import Footer from "@/app/components/movie-app/Footer";
+import Header from "@/app/components/movie-app/header";
 
 const ImageSearch = () => {
   const [images, setImages] = useState<[]>([]);
@@ -23,8 +25,10 @@ const ImageSearch = () => {
 
   return (
     <div>
+      <Header/>
       <SearchBar onSubmit={handleSearch} />
       <ImageList images={images} /> {/* Pass images as props */}
+   <Footer/>
     </div>
   );
 };
