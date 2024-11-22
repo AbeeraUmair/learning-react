@@ -4,7 +4,11 @@ import React, { useState, useEffect } from "react";
 import MovieList from "@/app/components/movie-app/MovieSection";
 import Header from "@/app/components/movie-app/header";
 import Banner from "@/app/components/movie-app/Banner";
+<<<<<<< HEAD
 import Footer from "@/app/components/movie-app/Footer";
+=======
+import { FaAdversal } from "react-icons/fa";
+>>>>>>> 12406d1d6ef5f932c6bb473927cda36d45c506c1
 
 const MoviePage = () => {
   const [movies, setMovies] = useState([]);
