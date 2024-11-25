@@ -36,10 +36,6 @@ const MovieSection: React.FC<MovieSectionProps> = ({ title, movies }) => {
     }
   };
 
-  if (!movies || movies.length === 0) {
-    return <p className="text-center text-gray-500">No movies found.</p>;
-  }
-
   return (
     <div className="mb-8">
       <h2 className="text-2xl font-bold mb-4">{title}</h2>

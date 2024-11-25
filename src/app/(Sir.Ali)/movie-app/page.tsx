@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import MovieList from "@/app/components/movie-app/MovieSection";
 import Header from "@/app/components/movie-app/header";
 import Banner from "@/app/components/movie-app/Banner";
-import { FaAdversal } from "react-icons/fa";
+import Footer from "@/app/components/movie-app/Footer";
 
 const MoviePage = () => {
   const [movies, setMovies] = useState([]);
@@ -64,7 +64,7 @@ const MoviePage = () => {
       <Header />
       <Banner />
       <div className="flex justify-between m-4">
-        <h1 className="text-xl font-bold">Search Movies</h1>
+    <h1 className="text-xl font-bold">Search Movies</h1>
         <input
           type="text"
           className="rounded-lg p-2 w-full border-2 border-black"
@@ -73,15 +73,18 @@ const MoviePage = () => {
             if (e.key === "Enter") handleSearch((e.target as HTMLInputElement).value);
           }}
         />
+       
       </div>
+
       <div className="m-4">
-        <MovieList movies={movies} title="Searched Items" />
+        {movies.length > 0 &&  <MovieList movies={movies} title="Searched Movies" />}
         <MovieList movies={popular} title="Popular Movies" />
         <MovieList movies={upcoming} title="Upcoming Movies" />
         <MovieList movies={topRated} title="Top Rated Movies" />
         <MovieList movies={nowPlaying} title="Now Playing Movies" />
         <MovieList movies={netflix} title="Netflix Movies" />
       </div>
+      <Footer />
     </div>
   );
 };

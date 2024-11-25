@@ -1,0 +1,64 @@
+GET http://127.0.0.1:3002/books HTTP/1.1
+Content-Type: application/json
+
+
+###
+
+POST http://127.0.0.1:3002/books HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "jANNAT K PATTAY",
+  "author": "UMERA AHMED",
+  "publicationYear": 2018
+}
+
+###
+
+POST http://127.0.0.1:3002/books HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "jANNAT K PATTAY",
+  "author": "UMERA AHMED",
+  "publicationYear": 2018
+}
+###
+
+PUT http://127.0.0.1:3002/books/794f HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "PEER E KAMIL",
+  "author": "NIMRA AHMED",
+  "publicationYear": 2015
+}
+
+###
+PATCH http://127.0.0.1:3002/books/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "PEER E KAMIL",
+  "author": "UMERA AHMED",
+  "publicationYear": 2015
+}
+
+###
+DELETE  http://127.0.0.1:3002/books/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "PEER E KAMIL",
+  "author": "UMERA AHMED",
+  "publicationYear": 2015
+}
+
+
+
+
+
+
+
+
+
