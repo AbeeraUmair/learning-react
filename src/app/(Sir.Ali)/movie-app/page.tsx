@@ -57,7 +57,13 @@ const MoviePage = () => {
     };
 
     fetchMovies();
-  }, []); // Empty dependency array to fetch on mount
+  }, [
+    routes.popular,
+    routes.upcoming,
+    routes.topRated,
+    routes.nowPlaying,
+    routes.netflix,
+  ]); // Empty dependency array to fetch on mount
 
   return (
     <div>

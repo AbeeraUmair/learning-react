@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
 type VolumeInfo = {
     title: string;
@@ -68,11 +69,13 @@ export default function SearchClient({ initialBooks }: Props) {
                 {books.map((book) => {
                     const info = book.volumeInfo;
                     return (
-                        <Link href={`/${book.id}`}>
-                            <div key={book.id} className="bg-white shadow-md rounded-lg p-4">
-                                <img
+                        <Link key={book.id} href={`/${book.id}`}>
+                            <div className="bg-white shadow-md rounded-lg p-4">
+                                <Image
                                     src={info.imageLinks?.thumbnail || '/placeholder.jpg'}
                                     alt={info.title}
+                                    width={300}
+                                    height={160}
                                     className="w-full h-40 object-cover mb-4"
                                 />
                                 <h2 className="text-xl font-semibold">{info.title}</h2>

@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
-
+import Image from 'next/image';
 interface Param{
-    params:{
+    params: Promise<{
         bookid:string
-    }
+    }>
 }
 
 const BookPage =async ({params}:Param) => {
@@ -21,9 +21,11 @@ const BookPage =async ({params}:Param) => {
       return (
         <div className="p-8">
           <div className="bg-white shadow-md rounded-lg p-6 max-w-3xl mx-auto">
-            <img
+            <Image
               src={volumeInfo.imageLinks?.thumbnail || '/placeholder.jpg'}
               alt={volumeInfo.title}
+              width={600}
+              height={400}
               className="w-full h-64 object-cover mb-4"
             />
             <h1 className="text-2xl font-bold mb-2">{volumeInfo.title}</h1>
@@ -49,5 +51,4 @@ const BookPage =async ({params}:Param) => {
   
   
   export default BookPage;
-   
-  
+
